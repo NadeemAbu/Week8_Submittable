@@ -1,7 +1,12 @@
-﻿BEGIN
+﻿IF '$(LoadTestData)' = 'true'
+
+BEGIN
+
+DELETE FROM Book;
+DELETE FROM Author;
+DELETE FROM Student;
 
 INSERT INTO Author VALUES
-(32567, 'Edgar', 'Codd', 150111222),
 (32567, 'Edgar', 'Codd', 150111222),
 (76543, 'Vinton', 'Cerf', 150222333),
 (12345, 'Alan', 'Turing', 150333444);
